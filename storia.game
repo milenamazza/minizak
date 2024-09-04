@@ -1,0 +1,86 @@
+[world:Il mondo di Babbo Natale]
+description	Benvenuto nel magico mondo del Natale!
+start	giardino di Babbo Natale
+
+[room:giardino di Babbo Natale]
+description	il giardino di Babbo Natale
+objects	regalo,tenaglie
+characters	elfo,Fiocco
+links	E:slitta,S:porta natalizia
+
+[room:salone di Babbo Natale]
+description	il salone di Babbo Natale
+objects	cassettone,albero di Babbo Natale,fiammifero
+characters	Mamma del Natale
+links	N:porta natalizia,E:sportello cassaforte
+
+[room:cassaforte di Babbo Natale]
+description	la cassaforte di Babbo Natale
+objects	soldi
+links	O:sportello cassaforte
+
+[room:tetto della casa]
+description	tetto della casa
+characters	piff
+links	S:comignolo,N:scala,O:slitta
+
+[room:ripostiglio]
+description	il ripostiglio della casa
+objects	armadio degli attrezzi
+links	E:porta ripostiglio
+
+[room:giardino della casa]
+description	il giardino della casa
+objects	pupazzo di neve
+links	O:porta ripostiglio,S:scala
+
+[room:salone della casa]
+description	il salone della casa
+objects	albero di natale,caminetto,palla di neve
+characters	spirito del natale
+links	E:porta piccola,N:comignolo
+
+[room:cucina]
+description	il salone della casa
+objects	tavolo
+links	O:porta piccola
+
+[links]
+porta natalizia	Porta	giardino di Babbo Natale	salone di Babbo Natale
+sportello cassaforte	Sportello	salone di Babbo Natale	cassaforte di Babbo Natale
+slitta	Slitta	giardino di Babbo Natale	tetto della casa
+comignolo	Porta	tetto della casa	salone della casa
+scala	Porta	tetto della casa	giardino della casa
+porta ripostiglio	Porta	ripostiglio	giardino della casa
+porta piccola	Porta	cucina	salone della casa
+
+[objects]
+regalo	Regalo
+cassettone	Cassetto	chiave gialla
+albero di Babbo Natale	Albero
+soldi	Soldi
+tenaglie	Tronchesi	armadio degli attrezzi
+armadio degli attrezzi	Armadio	fune
+albero di natale	Albero
+chiave piccola	Chiave	porta piccola
+tavolo	Scrivania	lettera
+chiave gialla	Chiave	scala
+chiave nera	Chiave	porta ripostiglio
+fune	Chiave	comignolo
+lettera	Lettera
+caminetto	Camino	chiave piccola
+palla di neve	Neve
+pupazzo di neve	Pupazzo	chiave nera
+fiammifero	Fiammifero
+
+[characters]
+piff	Gatto
+elfo	Venditore	regalo	tenaglie
+Fiocco	Renna
+Mamma del Natale	Guardiano	fiammifero	piff	
+spirito del natale	Guardiano	palla di neve	regalo
+
+[player]
+Babbo Natale
+
+
